@@ -147,11 +147,11 @@ class HockeyAppUploadTask extends DefaultTask {
             }
         }
 
-        uploadAppplicationFileToHockeyApp(applicationFile, mappingFile, appId)
+        uploadApplicationFileToHockeyApp(applicationFile, mappingFile, appId)
 
     }
 
-    def void uploadAppplicationFileToHockeyApp(File appFile, @Nullable File mappingFile, @Nullable String appId) {
+    def void uploadApplicationFileToHockeyApp(File appFile, @Nullable File mappingFile, @Nullable String appId) {
 
         ProgressLogger progressLogger = services.get(ProgressLoggerFactory).newOperation(this.getClass())
         progressLogger.start("Upload file to Hockey App", "Upload file")
